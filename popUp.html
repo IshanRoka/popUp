@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .text{
+            background: rgb(185, 199, 185);
+            position: relative;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            display: none;
+        }
+        .text button{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 14px;
+            background: transparent;
+        }
+        .btn{
+            background: blue;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <h1>POPUP</h1>
+            <button class="close">X</button>
+        </div>
+        <button class="btn">Click here</button>
+    </div>
+    <script>
+        const text=document.querySelector(".text")
+        const close=document.querySelector(".close")
+        const click=document.querySelector(".btn")
+
+        click.addEventListener("click",()=>{
+            text.style.display="flex"
+        })
+        close.addEventListener("click",()=>{
+            text.style.display="none"
+        })
+        
+        
+    </script>
+</body>
+</html>
